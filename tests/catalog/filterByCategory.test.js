@@ -20,7 +20,14 @@ describe("filterByCategory", () => {
     expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
   });
 
-  test.todo("'electronics' возвращает товары с ID [1, 2]");
+  test("'electronics' возвращает товары с ID [1, 2]", () => {
+    const ACTUAL_VALUE = filterByCategory(products, "electronics").map(
+      (e) => e.id,
+    );
+    const EXPECTED_VALUE = [1, 2];
+    expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
+  });
+
   test.todo("'books' возвращает товары с ID [3, 6]");
   test.todo("'home' возвращает товары с ID [4, 5]");
   test.todo("'clothes' возвращает пустой массив");
