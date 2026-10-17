@@ -28,7 +28,12 @@ describe("filterByCategory", () => {
     expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
   });
 
-  test.todo("'books' возвращает товары с ID [3, 6]");
+  test("'books' возвращает товары с ID [3, 6]", () => {
+    const ACTUAL_VALUE = filterByCategory(products, "books").map((e) => e.id);
+    const EXPECTED_VALUE = [3, 6];
+    expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
+  });
+
   test.todo("'home' возвращает товары с ID [4, 5]");
   test.todo("'clothes' возвращает пустой массив");
   test.todo("'toys' возвращает пустой массив");
