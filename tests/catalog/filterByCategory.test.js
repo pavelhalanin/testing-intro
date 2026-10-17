@@ -52,5 +52,9 @@ describe("filterByCategory", () => {
     expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
   });
 
-  test.todo("'sports' возвращает пустой массив");
+  test("'sports' возвращает пустой массив", () => {
+    const ACTUAL_VALUE = filterByCategory(products, "sports").map((e) => e.id);
+    const EXPECTED_VALUE = [];
+    expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
+  });
 });
