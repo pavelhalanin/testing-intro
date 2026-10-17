@@ -16,7 +16,14 @@ describe("searchProducts", () => {
     expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
   });
 
-  test.todo("'Настольная лампа' возвращает товар с ID 4");
+  test("'Настольная лампа' возвращает товар с ID 4", () => {
+    const ACTUAL_VALUE = searchProducts(products, "Настольная лампа").map(
+      (e) => e.id,
+    );
+    const EXPECTED_VALUE = [4];
+    expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
+  });
+
   test.todo("'javascript' возвращает товар с ID 3");
   test.todo("'ЧЕХОЛ' возвращает товар с ID 5");
   test.todo("'наушники' возвращает товар с ID 1");
