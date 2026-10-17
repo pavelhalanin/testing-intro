@@ -24,7 +24,14 @@ describe("searchProducts", () => {
     expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
   });
 
-  test.todo("'javascript' возвращает товар с ID 3");
+  test("'javascript' возвращает товар с ID 3", () => {
+    const ACTUAL_VALUE = searchProducts(products, "javascript").map(
+      (e) => e.id,
+    );
+    const EXPECTED_VALUE = [3];
+    expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
+  });
+
   test.todo("'ЧЕХОЛ' возвращает товар с ID 5");
   test.todo("'наушники' возвращает товар с ID 1");
   test.todo("пустая строка возвращает товары с ID [1, 2, 3, 4, 5, 6]");
