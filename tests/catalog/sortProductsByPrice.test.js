@@ -67,5 +67,10 @@ describe("sortProductsByPrice", () => {
     expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
   });
 
-  test.todo("направление по умолчанию не меняет исходный массив всех товаров");
+  test("направление по умолчанию не меняет исходный массив всех товаров", () => {
+    sortProductsByPrice(products);
+    const ACTUAL_VALUE = products.map((product) => product.id);
+    const EXPECTED_VALUE = [1, 2, 3, 4, 5, 6];
+    expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
+  });
 });
