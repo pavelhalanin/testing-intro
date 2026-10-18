@@ -50,5 +50,9 @@ describe("getProductById", () => {
     expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
   });
 
-  test.todo("ID NaN возвращает null");
+  test("ID NaN возвращает null", () => {
+    const ACTUAL_VALUE = getProductById(products, NaN);
+    const EXPECTED_VALUE = null;
+    expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
+  });
 });
