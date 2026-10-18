@@ -43,6 +43,10 @@ function addToCart(cart, product, quantity) {
 }
 
 function changeQuantity(cart, productId, newQuantity) {
+  if (newQuantity <= 0) {
+    throw new RangeError("Количество товара должно быть больше нуля");
+  }
+
   const BASKET = cart.map((product) => {
     if (product.id === productId) {
       return {
