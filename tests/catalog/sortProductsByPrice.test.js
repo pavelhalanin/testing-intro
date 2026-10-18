@@ -14,7 +14,15 @@ describe("sortProductsByPrice", () => {
     expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
   });
 
-  test.todo("товары [1, 3, 4] c 'asc' сортируются как [3, 4, 1]");
+  test("товары [1, 3, 4] c 'asc' сортируются как [3, 4, 1]", () => {
+    const ACTUAL_VALUE = sortProductsByPrice(
+      [1, 3, 4].map((id) => products.find((product) => product.id === id)),
+      "asc",
+    ).map((e) => e.id);
+    const EXPECTED_VALUE = [3, 4, 1];
+    expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
+  });
+
   test.todo("все товары c 'desc' сортируются как [1, 2, 4, 5, 6, 3]");
   test.todo("товары [3, 1, 4] c 'desc' сортируются как [1, 4, 3]");
   test.todo("товары [5, 2, 6] c 'desc' сортируются как [2, 5, 6]");
