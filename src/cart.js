@@ -11,6 +11,12 @@ function addToCart(cart, product, quantity) {
   const CURRENT_COUNT = FOUND_ITEM ? FOUND_ITEM.quantity : 0;
   const NEW_COUNT = CURRENT_COUNT + quantity;
 
+  if (NEW_COUNT > product.stock) {
+    throw new RangeError(
+      `Вы не можете добавить ${NEW_COUNT} шт. товара, так как на складе ${product.stock} шт.`,
+    );
+  }
+
   if (FOUND_ITEM) {
     const BASKET = cart.map((item) => {
       if (item.id === product.id) {
