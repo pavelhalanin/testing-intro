@@ -57,6 +57,15 @@ describe("sortProductsByPrice", () => {
     expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
   });
 
-  test.todo("'desc' не меняет исходный массив [1, 3, 4]");
+  test("'desc' не меняет исходный массив [1, 3, 4]", () => {
+    const ITEMS = [1, 3, 4].map((id) =>
+      products.find((product) => product.id === id),
+    );
+    sortProductsByPrice(ITEMS, "desc");
+    const ACTUAL_VALUE = ITEMS.map((product) => product.id);
+    const EXPECTED_VALUE = [1, 3, 4];
+    expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
+  });
+
   test.todo("направление по умолчанию не меняет исходный массив всех товаров");
 });
