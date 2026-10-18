@@ -49,6 +49,10 @@ function changeQuantity(cart, productId, newQuantity) {
 
   const PRODUCT = cart.find((product) => product.id === productId);
 
+  if (!PRODUCT) {
+    return cart;
+  }
+
   if (newQuantity > PRODUCT.stock) {
     throw new RangeError(
       `Вы не можете добавить ${newQuantity} шт. товара, так как на складе ${PRODUCT.stock} шт.`,
