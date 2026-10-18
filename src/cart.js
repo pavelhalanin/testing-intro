@@ -3,6 +3,10 @@ function notImplemented() {
 }
 
 function addToCart(cart, product, quantity) {
+  if (quantity <= 0) {
+    throw new RangeError("Количество товара должно быть больше нуля");
+  }
+
   const FOUND_ITEM = cart.find((item) => item.id === product.id);
   const CURRENT_COUNT = FOUND_ITEM ? FOUND_ITEM.quantity : 0;
   const NEW_COUNT = CURRENT_COUNT + quantity;
