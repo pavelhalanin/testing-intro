@@ -1,14 +1,19 @@
-const products = require('../../src/data/products');
-const { getProductById } = require('../../src/catalog');
+const products = require("../../src/data/products");
+const { getProductById } = require("../../src/catalog");
 
-describe('getProductById', () => {
-  test.todo('ID 1 возвращает products[0]');
-  test.todo('ID 4 возвращает products[3]');
-  test.todo('ID 6 возвращает products[5]');
-  test.todo('ID 0 возвращает null');
-  test.todo('ID 999 возвращает null');
-  test.todo('ID -1 возвращает null');
+describe("getProductById", () => {
+  test("ID 1 возвращает products[0]", () => {
+    const ACTUAL_VALUE = getProductById(products, 1);
+    const EXPECTED_VALUE = products[0];
+    expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
+  });
+
+  test.todo("ID 4 возвращает products[3]");
+  test.todo("ID 6 возвращает products[5]");
+  test.todo("ID 0 возвращает null");
+  test.todo("ID 999 возвращает null");
+  test.todo("ID -1 возвращает null");
   test.todo("строковый ID '1' возвращает null");
-  test.todo('ID undefined возвращает null');
-  test.todo('ID NaN возвращает null');
+  test.todo("ID undefined возвращает null");
+  test.todo("ID NaN возвращает null");
 });
