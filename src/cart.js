@@ -3,11 +3,29 @@ function notImplemented() {
 }
 
 function addToCart(cart, product, quantity) {
+  const FOUND_ITEM = cart.find((item) => item.id === product.id);
+  const CURRENT_COUNT = FOUND_ITEM ? FOUND_ITEM.quantity : 0;
+  const NEW_COUNT = CURRENT_COUNT + quantity;
+
+  if (FOUND_ITEM) {
+    const BASKET = cart.map((item) => {
+      if (item.id === product.id) {
+        return {
+          ...item,
+          quantity: NEW_COUNT,
+        };
+      }
+      return item;
+    });
+
+    return BASKET;
+  }
+
   const BASKET = [
     ...cart,
     {
       ...product,
-      quantity: quantity,
+      quantity: NEW_COUNT,
     },
   ];
 
