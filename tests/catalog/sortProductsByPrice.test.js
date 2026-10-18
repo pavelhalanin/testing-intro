@@ -29,7 +29,15 @@ describe("sortProductsByPrice", () => {
     expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
   });
 
-  test.todo("товары [3, 1, 4] c 'desc' сортируются как [1, 4, 3]");
+  test("товары [3, 1, 4] c 'desc' сортируются как [1, 4, 3]", () => {
+    const ACTUAL_VALUE = sortProductsByPrice(
+      [3, 1, 4].map((id) => products.find((product) => product.id === id)),
+      "desc",
+    ).map((e) => e.id);
+    const EXPECTED_VALUE = [1, 4, 3];
+    expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
+  });
+
   test.todo("товары [5, 2, 6] c 'desc' сортируются как [2, 5, 6]");
   test.todo("'asc' не меняет исходный массив [1, 3, 4]");
   test.todo("'desc' не меняет исходный массив [1, 3, 4]");
