@@ -47,6 +47,14 @@ function changeQuantity(cart, productId, newQuantity) {
     throw new RangeError("Количество товара должно быть больше нуля");
   }
 
+  const PRODUCT = cart.find((product) => product.id === productId);
+
+  if (newQuantity > PRODUCT.stock) {
+    throw new RangeError(
+      `Вы не можете добавить ${newQuantity} шт. товара, так как на складе ${PRODUCT.stock} шт.`,
+    );
+  }
+
   const BASKET = cart.map((product) => {
     if (product.id === productId) {
       return {
