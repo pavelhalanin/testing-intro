@@ -42,9 +42,20 @@ function addToCart(cart, product, quantity) {
   return BASKET;
 }
 
-function changeQuantity() {
-  return notImplemented();
+function changeQuantity(cart, productId, newQuantity) {
+  const BASKET = cart.map((product) => {
+    if (product.id === productId) {
+      return {
+        ...product,
+        quantity: newQuantity,
+      };
+    }
+    return product;
+  });
+
+  return BASKET;
 }
+
 function removeFromCart() {
   return notImplemented();
 }
