@@ -14,7 +14,12 @@ describe("getProductById", () => {
     expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
   });
 
-  test.todo("ID 6 возвращает products[5]");
+  test("ID 6 возвращает products[5]", () => {
+    const ACTUAL_VALUE = getProductById(products, 6);
+    const EXPECTED_VALUE = products[5];
+    expect(ACTUAL_VALUE).toEqual(EXPECTED_VALUE);
+  });
+
   test.todo("ID 0 возвращает null");
   test.todo("ID 999 возвращает null");
   test.todo("ID -1 возвращает null");
