@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1792430898320" clover="3.2.0">
+  <project timestamp="1792430898321" name="All files">
+    <metrics statements="54" coveredstatements="52" conditionals="43" coveredconditionals="37" methods="21" coveredmethods="21" elements="118" coveredelements="110" complexity="0" loc="54" ncloc="54" packages="1" files="2" classes="2"/>
+    <file name="cart.js" path="C:\Users\pavel\Desktop\2026-10_FULL_STACK\testing-intro\src\cart.js">
+      <metrics statements="42" coveredstatements="40" conditionals="28" coveredconditionals="24" methods="11" coveredmethods="11"/>
+      <line num="2" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="7" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="8" count="3" type="stmt"/>
+      <line num="10" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="16" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="18" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="24" count="0" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="42" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="43" count="1" type="stmt"/>
+      <line num="46" count="3" type="stmt"/>
+      <line num="48" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="49" count="1" type="stmt"/>
+      <line num="52" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="53" count="1" type="stmt"/>
+      <line num="58" count="1" type="stmt"/>
+      <line num="59" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="60" count="1" type="stmt"/>
+      <line num="65" count="0" type="stmt"/>
+      <line num="68" count="1" type="stmt"/>
+      <line num="72" count="4" type="stmt"/>
+      <line num="76" count="8" type="stmt"/>
+      <line num="77" count="8" type="stmt"/>
+      <line num="82" count="5" type="stmt"/>
+      <line num="84" count="5" type="stmt"/>
+      <line num="85" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="86" count="4" type="stmt"/>
+      <line num="89" count="5" type="stmt"/>
+      <line num="91" count="5" type="cond" truecount="4" falsecount="0"/>
+      <line num="92" count="1" type="stmt"/>
+      <line num="95" count="5" type="stmt"/>
+      <line num="97" count="5" type="stmt"/>
+      <line num="105" count="1" type="stmt"/>
+      <line num="113" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="114" count="1" type="cond" truecount="1" falsecount="1"/>
+    </file>
+    <file name="catalog.js" path="C:\Users\pavel\Desktop\2026-10_FULL_STACK\testing-intro\src\catalog.js">
+      <metrics statements="12" coveredstatements="12" conditionals="15" coveredconditionals="13" methods="10" coveredmethods="10"/>
+      <line num="2" count="9" type="cond" truecount="4" falsecount="0"/>
+      <line num="3" count="36" type="stmt"/>
+      <line num="7" count="9" type="stmt"/>
+      <line num="8" count="9" type="cond" truecount="2" falsecount="0"/>
+      <line num="9" count="36" type="stmt"/>
+      <line num="13" count="9" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="62" type="stmt"/>
+      <line num="18" count="19" type="stmt"/>
+      <line num="22" count="47" type="cond" truecount="2" falsecount="0"/>
+      <line num="25" count="5" type="stmt"/>
+      <line num="27" count="5" type="cond" truecount="1" falsecount="1"/>
+      <line num="28" count="5" type="cond" truecount="1" falsecount="1"/>
+    </file>
+  </project>
+</coverage>
