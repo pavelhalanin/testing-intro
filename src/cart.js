@@ -1,7 +1,3 @@
-function notImplemented() {
-  throw new Error("Корзина ещё не реализована. Сначала прочитайте тесты.");
-}
-
 function addToCart(cart, product, quantity) {
   if (quantity <= 0) {
     throw new RangeError("Количество товара должно быть больше нуля");
@@ -82,8 +78,15 @@ function calculateCartSubtotal(cart) {
   }, 0);
 }
 
-function calculateOrderTotal() {
-  return notImplemented();
+function calculateOrderTotal(cart, promoCode) {
+  const TOTAL_PRICE = calculateCartSubtotal(cart);
+
+  return {
+    delivery: 0,
+    discount: 0,
+    subtotal: TOTAL_PRICE,
+    total: TOTAL_PRICE,
+  };
 }
 
 const cartApi = {
