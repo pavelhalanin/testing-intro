@@ -81,11 +81,18 @@ function calculateCartSubtotal(cart) {
 function calculateOrderTotal(cart, promoCode) {
   const TOTAL_PRICE = calculateCartSubtotal(cart);
 
+  let delivery = 0;
+  if (TOTAL_PRICE < 50000) {
+    delivery = 30000;
+  }
+
+  const TOTAL = TOTAL_PRICE + delivery;
+
   return {
-    delivery: 0,
+    delivery: delivery,
     discount: 0,
     subtotal: TOTAL_PRICE,
-    total: TOTAL_PRICE,
+    total: TOTAL,
   };
 }
 
