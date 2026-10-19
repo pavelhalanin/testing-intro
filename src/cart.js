@@ -86,11 +86,17 @@ function calculateOrderTotal(cart, promoCode) {
     delivery = 30000;
   }
 
-  const TOTAL = TOTAL_PRICE + delivery;
+  let discount = 0;
+
+  if (promoCode === "SAVE10" && TOTAL_PRICE >= 20000) {
+    discount = Math.round(TOTAL_PRICE * 0.1);
+  }
+
+  const TOTAL = TOTAL_PRICE + delivery - discount;
 
   return {
     delivery: delivery,
-    discount: 0,
+    discount: discount,
     subtotal: TOTAL_PRICE,
     total: TOTAL,
   };
